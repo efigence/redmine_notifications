@@ -6,6 +6,8 @@ Notification are stored in sidekiq notifications quene.
 
 This plugin is for other plugins to make simple notification system, eg: [This Plugin](https://github.com/efigence/redmine_resources_management) using Notifications from here.
 
+It's dependent from [Redmine Sidekiq](https://github.com/ogom/redmine_sidekiq)
+
 
 # Instalation
   1. Go to your Redmine installation's plugins/ directory.
