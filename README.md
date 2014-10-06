@@ -4,9 +4,14 @@ Redmine Notifications Plugin
 It's using redmine_sidekiq plugin as a dependencie so make sure you have it - http://www.redmine.org/plugins/sidekiq.
 Notification are stored in sidekiq notifications quene. 
 When you `start sidekiq` make sure you pass `-q` option 
-eg:
-  `$ bundle exec sidekiq -q notifications -q default`
+eg: `$ bundle exec sidekiq -q notifications -q default`
 
+# Instalation
+  1. Go to your Redmine installation's plugins/ directory.
+  2. `git clone git@github.com:efigence/redmine_notifications.git && cd ..`
+  3. `bundle exec rake redmine:plugins:migrate NAME=redmine_notifications_plugin RAILS_ENV=production`
+  4. `bundle exec sidekiq -q notifications -q default`
+  5. Restart Server
 
 
 # License
