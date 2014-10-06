@@ -11,8 +11,11 @@ eg: `$ bundle exec sidekiq -q notifications -q default`
   2. `git clone git@github.com:efigence/redmine_notifications.git && cd ..`
   3. `bundle exec rake redmine:plugins:migrate NAME=redmine_notifications_plugin RAILS_ENV=production`
   4. `bundle exec sidekiq -q notifications -q default`
-  5. Restart Server
+  5. Restart Server.
+  6. Set your own configuration -> Admin/Notificaitons Plugin
 
+When you `start sidekiq` make sure you pass `-q` option 
+eg: `$ bundle exec sidekiq -q notifications -q default`
 
 # License
 Copyright (C) 2014  efigence S.A.
