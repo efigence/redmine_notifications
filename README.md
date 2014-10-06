@@ -2,7 +2,10 @@ Redmine Notifications Plugin
 ============================
 
 It's using redmine_sidekiq plugin as a dependencie so make sure you have it - http://www.redmine.org/plugins/sidekiq.
-Notification are stored in sidekiq notifications quene. 
+Notification are stored in sidekiq notifications quene.
+
+This plugin is for other plugins to make simple notification system, eg: [This Plugin](https://github.com/efigence/redmine_resources_management) using Notifications from here.
+
 
 # Instalation
   1. Go to your Redmine installation's plugins/ directory.
@@ -14,6 +17,22 @@ Notification are stored in sidekiq notifications quene.
 
 When you `start sidekiq` make sure you pass `-q` option 
 eg: `$ bundle exec sidekiq -q notifications -q default`
+
+# Configuration
+This is sample sidekiq configuration:
+```
+---
+:verbose: false
+:pidfile: ./tmp/pids/sidekiq.pid
+:logfile: ./log/sidekiq.log
+:concurrency:  6
+:queues:
+  - [default, 1]
+  - [notifications, 2]
+production:
+  :logfile: some_path/redmine/current/log/sidekiq.log
+  :pidfile: some_path/redmine/current/tmp/pids/sidekiq.pid
+```
 
 # License
 Copyright (C) 2014  efigence S.A.
