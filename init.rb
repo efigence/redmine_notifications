@@ -39,7 +39,6 @@ Redmine::Plugin.register :redmine_notifications do
              'ssl_ca_file' => '/etc/pki/tls/certs/ca-bundle.crt',
   }, :partial => 'settings/notifications_settings')
 
-  requires_redmine_plugin :redmine_sidekiq
 end
 
 HttpLog.options[:logger] = Rails.logger
