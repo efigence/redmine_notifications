@@ -1,8 +1,11 @@
-= notifications
+Redmine Notifications Plugin
+============================
 
 It's using redmine_sidekiq plugin as a dependencie so make sure you have it - http://www.redmine.org/plugins/sidekiq.
-Notification are stored in sidekiq notifications quene. When you start sidekiq make sure you pass -q option eg
-  $ bundle exec sidekiq -q notifications -q default
+Notification are stored in sidekiq notifications quene. 
+When you `start sidekiq` make sure you pass `-q` option 
+eg:
+  `$ bundle exec sidekiq -q notifications -q default`
 
 
 
