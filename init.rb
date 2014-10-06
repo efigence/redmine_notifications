@@ -15,7 +15,7 @@ else
 end
 
 
-Redmine::Plugin.register :notifications do
+Redmine::Plugin.register :redmine_notifications do
   name 'Notifications plugin'
   author 'Rafał Lisowski'
   description 'A plugin for notifications.'
