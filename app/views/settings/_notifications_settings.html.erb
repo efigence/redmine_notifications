@@ -1,0 +1,16 @@
+<p>
+  <label for="smsapi_username">smsapi_username</label>
+  <%= text_field_tag 'settings[smsapi_username]', @settings['smsapi_username'] %></p>
+<p>
+  <label for="smsapi_password">smsapi_password</label>
+  <%= text_field_tag 'settings[smsapi_password]', @settings['smsapi_password'] %></p>
+<p>
+  <label for="test">test</label>
+  <%= text_field_tag 'settings[test]', @settings['test'] %></p>
+<p>
+  <label for="proxy_host">proxy</label>
+  <%= text_field_tag 'settings[proxy_host]', @settings['proxy_host'] %>:<%= text_field_tag 'settings[proxy_port]', @settings['proxy_port'] %></p>
+<p>
+  <label for="ssl_ca_file">ssl_ca_file</label>
+  <%= text_field_tag 'settings[ssl_ca_file]', @settings['ssl_ca_file'] %></p>
+
