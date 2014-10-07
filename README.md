@@ -21,7 +21,7 @@ When you `start sidekiq` make sure you pass `-q` option
 eg: `$ bundle exec sidekiq -q notifications -q default`
 
 # Configuration
-This is sample sidekiq configuration:
+This is sample sidekiq configuration with queues:
 ```
 ---
 :verbose: false
